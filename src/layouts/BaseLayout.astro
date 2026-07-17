@@ -21,7 +21,7 @@ const {
 	title,
 	description = 'Oman’s flagship sovereign AI platform. World-class AI, 100% Omani-made, aligned with Oman Vision 2040. Enterprise-grade AI with complete data sovereignty.',
 	pageId,
-	ogImage = 'https://i.postimg.cc/j27bVjZd/Social-Banner.png',
+	ogImage = '/images/logo-footer.png',
 	showNavbar = true,
 	noindex = false,
 	bodyAttrs = {},
@@ -29,6 +29,7 @@ const {
 } = Astro.props;
 
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : undefined;
+const socialImage = Astro.site ? new URL(ogImage, Astro.site).href : ogImage;
 ---
 
 <!doctype html>
@@ -44,12 +45,18 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : un
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content={ogImage} />
+		<meta property="og:image" content={socialImage} />
+		<meta property="og:image:secure_url" content={socialImage} />
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:width" content="360" />
+		<meta property="og:image:height" content="360" />
+		<meta property="og:image:alt" content="National AI Technologies logo" />
 		{canonical && <meta property="og:url" content={canonical} />}
-		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content={ogImage} />
+		<meta name="twitter:image" content={socialImage} />
+		<meta name="twitter:image:alt" content="National AI Technologies logo" />
 
 		<meta name="generator" content={Astro.generator} />
 
