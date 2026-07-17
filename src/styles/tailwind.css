@@ -1,0 +1,7 @@
+/* Tailwind v4 — utilities only (no preflight, to keep the Webflow CSS intact). */
+@layer theme, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* The floating language dropdown is generated at runtime in public/js/i18n.js */
+@source "../../public/js/i18n.js";

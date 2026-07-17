@@ -1,0 +1,379 @@
+@font-face {
+  font-family: "SBC";
+  src: url("../fonts/sbc.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --_font-family---inter-tight: "SBC", sans-serif;
+  --_font-family---funnel-display: "SBC", sans-serif;
+  --_font-family---chivo-mono: "SBC", sans-serif;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font-family: "SBC", sans-serif;
+}
+
+.navbar-logo-wrapper {
+  gap: 10px;
+  align-items: center;
+  padding-left: 0;
+  display: inline-flex;
+}
+
+.navbar-wordmark {
+  color: var(--title-color);
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+/* ============ Layout guards ============ */
+/* Decorative elements (e.g. .section-circle) poke a few px past the viewport.
+   In RTL that side becomes scrollable and causes a horizontal scrollbar. */
+html,
+body {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+/* ============ Language dropdown ============ */
+/* Styled with Tailwind utilities in the markup; open/close state + Webflow resets here. */
+.lang-dropdown button {
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.lang-dropdown[data-open="true"] .lang-dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lang-dropdown[data-open="true"] .lang-chevron {
+  transform: rotate(180deg);
+}
+
+/* ============ Arabic typography ============ */
+html[lang="ar"] body,
+html[lang="ar"] p,
+html[lang="ar"] a,
+html[lang="ar"] div,
+html[lang="ar"] span,
+html[lang="ar"] li,
+html[lang="ar"] input,
+html[lang="ar"] textarea,
+html[lang="ar"] button {
+  font-family: "SBC", sans-serif;
+  letter-spacing: 0 !important;
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] h6 {
+  font-family: "SBC", sans-serif;
+  letter-spacing: 0 !important;
+  font-weight: 600;
+}
+
+/* Keep icon-font glyphs intact (Font Awesome / Webflow icons) */
+html[lang="ar"] .dropdown-toggle-arrow,
+html[lang="ar"] .process-tabs-menu-arrow,
+html[lang="ar"] .faq-accordion-icon,
+html[lang="ar"] .social-media,
+html[lang="ar"] .social-media div,
+html[lang="ar"] [class*="w-icon"] {
+  font-family: "Fa Solid 900", "Fa Brands 400", "Fa 400", "webflow-icons", Arial, sans-serif !important;
+}
+
+html[lang="ar"] .social-media,
+html[lang="ar"] .social-media div {
+  font-family: "Fa Brands 400", Arial, sans-serif !important;
+}
+
+html[lang="ar"] .faq-accordion-icon {
+  font-family: "Fa 400", Arial, sans-serif !important;
+}
+
+/* Arabic glyphs need more vertical room than Latin display fonts */
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3 {
+  line-height: 1.4 !important;
+}
+
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] h6,
+html[lang="ar"] p {
+  line-height: 1.8 !important;
+}
+
+/* ============ Typography refinement (both languages) ============ */
+/* Calmer, more professional scale than the template defaults. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+p,
+li,
+a,
+button,
+input,
+textarea {
+  overflow-wrap: anywhere;
+}
+
+p {
+  text-wrap: pretty;
+  max-width: 70ch;
+}
+
+:where(.w-layout-grid, [class*="card"], [class*="content"]) > * {
+  min-width: 0;
+}
+
+h1.banner-title {
+  font-size: clamp(38px, 4.2vw, 60px);
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+html[lang="ar"] h1.banner-title {
+  line-height: 1.35 !important;
+}
+
+h2.section-title {
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+h2.number-digit {
+  font-size: clamp(32px, 3.2vw, 44px);
+  line-height: var(--counter-height) !important;
+}
+
+html[lang="ar"] h2.number-digit {
+  line-height: var(--counter-height) !important;
+}
+
+.summery-counter-wrap {
+  --counter-height: 52px;
+  direction: ltr;
+  height: var(--counter-height);
+  font-variant-numeric: tabular-nums;
+}
+
+.single-counter-wrap {
+  height: var(--counter-height);
+  flex: 0 0 auto;
+}
+
+.single-counter-wrap .number-digit {
+  flex: 0 0 var(--counter-height);
+  width: 1ch;
+  height: var(--counter-height);
+  text-align: center;
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+
+.summery-counter-wrap > .number-digit {
+  flex: 0 0 auto;
+  height: var(--counter-height);
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+
+@media screen and (min-width: 1280px) {
+  .summery-counter-wrap {
+    --counter-height: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .summery-counter-wrap {
+    --counter-height: 46px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .summery-counter-wrap {
+    --counter-height: 30px;
+  }
+
+  h2.number-digit {
+    font-size: 28px;
+  }
+}
+
+.banner-description {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 540px;
+}
+
+.about-us-description {
+  font-size: 17px;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+h3.core-features-card-title {
+  font-size: 20px;
+}
+
+.banner-subtitle-single {
+  font-size: 14px;
+}
+
+.section.core-features {
+  overflow: clip;
+}
+
+.section.core-features .section-title-wrapper {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 48px;
+}
+
+.section.core-features .section-title.core-features {
+  max-width: 760px;
+}
+
+.core-features-card-title-description {
+  position: relative;
+  z-index: 10;
+}
+
+.core-features-flag-wrapper {
+  justify-content: center;
+}
+
+.core-features-flag.oman {
+  position: relative;
+  z-index: 1;
+  width: 76px;
+  max-width: 76px;
+  height: 76px;
+  margin-right: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  overflow: visible;
+  box-shadow: 0 12px 30px #00000052;
+}
+
+.core-features-flag.oman::before,
+.core-features-flag.oman::after {
+  content: "";
+  z-index: -1;
+  border: 1px solid #ce0704b3;
+  border-radius: 50%;
+  position: absolute;
+  inset: -5px;
+  pointer-events: none;
+  animation: oman-flag-pulse 2.8s ease-out infinite;
+}
+
+.core-features-flag.oman::after {
+  border-color: #046f3699;
+  animation-delay: 1.4s;
+}
+
+.oman-flag-image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
+@keyframes oman-flag-pulse {
+  0% {
+    opacity: .8;
+    transform: scale(1);
+  }
+
+  70%, 100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .core-features-flag.oman::before,
+  .core-features-flag.oman::after {
+    animation: none;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .core-features-flag.oman {
+    width: 54px;
+    max-width: 54px;
+    height: 54px;
+  }
+}
+
+/* Buttons: keep labels on one line (Arabic labels are wider) */
+.primary-button .button-text {
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+
+@media screen and (max-width: 479px) {
+  html[lang="ar"] .core-features-card-elements-wrap {
+    overflow: clip;
+  }
+
+  html[lang="ar"] .core-features-button-element {
+    left: 0;
+  }
+}
+
+/* ============ RTL adjustments ============ */
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+html[dir="rtl"] .nav-menu,
+html[dir="rtl"] .navbar-wrapper,
+html[dir="rtl"] .navbar-button-wrapper,
+html[dir="rtl"] .footer-bottom-content {
+  direction: rtl;
+}
+
+/* Keep phone numbers / emails / codes readable */
+html[dir="rtl"] a[href^="tel:"],
+html[dir="rtl"] a[href^="mailto:"] {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+/* Button arrows point the other way */
+html[dir="rtl"] .button-arrow,
+html[dir="rtl"] .action-panel-link-block-arrow,
+html[dir="rtl"] .dropdown-toggle-arrow {
+  transform: scaleX(-1);
+}

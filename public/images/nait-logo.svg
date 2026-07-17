@@ -1,0 +1,24 @@
+<svg width="252" height="38" viewBox="0 0 252 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="naitMarkFill" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(6 3) rotate(48) scale(46)">
+      <stop stop-color="#CE0704"/>
+      <stop offset="0.45" stop-color="#D30905"/>
+      <stop offset="0.78" stop-color="#05743A"/>
+      <stop offset="1" stop-color="#046F36"/>
+    </radialGradient>
+    <linearGradient id="naitMarkStroke" x1="19" y1="0" x2="19" y2="38" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CE0704"/>
+      <stop offset="1" stop-color="#046F36"/>
+    </linearGradient>
+  </defs>
+  <path d="M0.5 11.8387C0.5 8.8315 1.69461 5.94745 3.82103 3.82103C5.94745 1.69461 8.8315 0.5 11.8387 0.5H26.1613C29.1685 0.5 32.0525 1.69461 34.179 3.82103C36.3054 5.94745 37.5 8.8315 37.5 11.8387V26.1613C37.5 29.1685 36.3054 32.0525 34.179 34.179C32.0525 36.3054 29.1685 37.5 26.1613 37.5H11.8387C8.8315 37.5 5.94745 36.3054 3.82103 34.179C1.69461 32.0525 0.5 29.1685 0.5 26.1613V11.8387Z" fill="url(#naitMarkFill)" stroke="url(#naitMarkStroke)"/>
+  <!-- Neural "N" mark -->
+  <path d="M12 27V11L26 27V11" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="12" cy="11" r="3" fill="white"/>
+  <circle cx="12" cy="27" r="2.2" fill="white" fill-opacity="0.85"/>
+  <circle cx="26" cy="27" r="3" fill="white"/>
+  <circle cx="26" cy="11" r="2.2" fill="white" fill-opacity="0.85"/>
+  <!-- Wordmark -->
+  <text x="48" y="19" font-family="'Inter Tight','Segoe UI',Arial,sans-serif" font-size="17" font-weight="700" fill="#222222" letter-spacing="-0.2">National AI</text>
+  <text x="48" y="33" font-family="'Inter Tight','Segoe UI',Arial,sans-serif" font-size="8.5" font-weight="600" fill="#CE0704" letter-spacing="3.4">TECHNOLOGIES</text>
+</svg>

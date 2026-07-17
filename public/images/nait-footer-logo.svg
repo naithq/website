@@ -1,0 +1,11 @@
+<svg width="1245" height="354" viewBox="0 0 1245 354" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="naitFooterFill" x1="0" y1="0" x2="1245" y2="354" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CE0704"/>
+      <stop offset="0.5" stop-color="#D30905"/>
+      <stop offset="1" stop-color="#046F36"/>
+    </linearGradient>
+  </defs>
+  <text x="622" y="205" text-anchor="middle" font-family="'Inter Tight','Segoe UI',Arial,sans-serif" font-size="188" font-weight="800" letter-spacing="-4" fill="url(#naitFooterFill)">NATIONAL AI</text>
+  <text x="622" y="290" text-anchor="middle" font-family="'Inter Tight','Segoe UI',Arial,sans-serif" font-size="52" font-weight="600" letter-spacing="34" fill="#222222" fill-opacity="0.75">TECHNOLOGIES</text>
+</svg>

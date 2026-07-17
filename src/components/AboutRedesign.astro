@@ -1,0 +1,108 @@
+<main class="about-page">
+  <section class="about-hero">
+    <img src="/images/oman.webp" alt="Omani architecture" class="about-hero-image" />
+    <div class="about-hero-overlay"></div>
+    <div class="about-hero-content">
+      <div class="about-kicker">National AI Technologies</div>
+      <h1>Oman’s intelligence. Built for Oman.</h1>
+      <p>NAIT builds sovereign AI infrastructure and products that help government, enterprise, and academia move with confidence while keeping data, capability, and value inside the Sultanate.</p>
+      <a href="/contact-us" class="about-primary-link">Partner with NAIT <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="about-intro">
+    <div class="about-intro-label">Our purpose</div>
+    <div class="about-intro-copy">
+      <h2>A national technology company with a clear mandate.</h2>
+      <p>We translate advanced AI into secure, practical systems for Oman. From Arabic-first intelligence to predictive platforms and governed data infrastructure, every capability is designed around national priorities and Oman Vision 2040.</p>
+    </div>
+    <div class="about-mark" aria-hidden="true">
+      <img src="/images/logo-header.png" alt="" />
+      <span>NAIT</span>
+    </div>
+  </section>
+
+  <section class="about-principles">
+    <div class="about-section-heading">
+      <div class="about-kicker dark">How we work</div>
+      <h2>Designed for lasting national value.</h2>
+    </div>
+    <div class="about-principles-grid">
+      <article class="about-principle">
+        <span>01</span>
+        <h3>Sovereign by design</h3>
+        <p>Data and workloads remain within Oman, supported by secure infrastructure, clear governance, and enterprise-grade controls.</p>
+      </article>
+      <article class="about-principle featured">
+        <span>02</span>
+        <h3>Arabic-first intelligence</h3>
+        <p>Our models reflect Omani language, context, and institutions so AI works naturally for the people and organizations it serves.</p>
+      </article>
+      <article class="about-principle">
+        <span>03</span>
+        <h3>Capability that stays</h3>
+        <p>We build alongside Omani teams, transferring knowledge and developing the talent required to operate and advance each system.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="about-vision">
+    <div class="about-vision-copy">
+      <div class="about-kicker">Oman Vision 2040</div>
+      <h2>Technology that strengthens the nation behind it.</h2>
+    </div>
+    <p>Our measure of progress is not technology alone. It is faster public services, stronger institutions, more competitive businesses, and a generation of Omani talent equipped to lead the AI economy.</p>
+    <a href="mailto:contact@nait.om" class="about-email">contact@nait.om</a>
+  </section>
+</main>
+
+<style>
+  .about-page { color: #222; background: #f8f8f8; }
+  .about-hero { min-height: min(760px, calc(100vh - 89px)); position: relative; display: flex; align-items: flex-end; overflow: hidden; }
+  .about-hero-image, .about-hero-overlay { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .about-hero-image { object-fit: cover; object-position: center 42%; }
+  .about-hero-overlay { background: linear-gradient(180deg, #1110 10%, #1114 45%, #111e 100%); }
+  .about-hero-content { z-index: 1; width: min(1280px, calc(100% - 48px)); margin: 0 auto; padding: 100px 0 72px; color: #fff; }
+  .about-kicker { margin-bottom: 20px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0; }
+  .about-kicker::before { content: ""; display: inline-block; width: 28px; height: 3px; margin-inline-end: 10px; vertical-align: middle; background: linear-gradient(90deg, #ce0704, #046f36); }
+  .about-kicker.dark { color: #505050; }
+  h1 { max-width: 1120px; margin: 0 0 24px; color: #fff; font-size: clamp(44px, 5vw, 68px); line-height: 1.05; font-weight: 600; text-wrap: balance; }
+  .about-hero-content p { max-width: 680px; margin: 0 0 34px; color: #ffffffd6; font-size: 19px; line-height: 1.65; }
+  .about-primary-link { display: inline-flex; gap: 18px; align-items: center; padding: 15px 20px; border-radius: 999px; color: #fff; background: #ce0704; font-weight: 600; text-decoration: none; }
+  .about-primary-link span { font-size: 20px; }
+  .about-intro { width: min(1280px, calc(100% - 48px)); margin: 0 auto; padding: 120px 0; display: grid; grid-template-columns: .55fr 1.6fr .55fr; gap: 48px; align-items: start; border-bottom: 1px solid #0000001a; }
+  .about-intro-label { color: #7b7974; font-size: 13px; text-transform: uppercase; }
+  .about-intro-copy h2, .about-section-heading h2, .about-vision h2 { margin: 0; color: #222; font-size: clamp(30px, 3vw, 44px); line-height: 1.2; font-weight: 600; text-wrap: balance; }
+  .about-intro-copy p { max-width: 740px; margin: 28px 0 0; color: #585858; font-size: 18px; line-height: 1.75; }
+  .about-mark { justify-self: end; display: flex; gap: 12px; align-items: center; color: #222; font-size: 25px; font-weight: 700; }
+  .about-mark img { width: 52px; height: 52px; }
+  .about-principles { width: min(1280px, calc(100% - 48px)); margin: 0 auto; padding: 120px 0; }
+  .about-section-heading { max-width: 720px; margin-bottom: 56px; }
+  .about-principles-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid #0000001a; }
+  .about-principle { min-height: 340px; padding: 34px; display: flex; flex-direction: column; border-inline-end: 1px solid #0000001a; background: #fff; }
+  .about-principle:last-child { border-inline-end: 0; }
+  .about-principle.featured { color: #fff; background: #121212; }
+  .about-principle > span { color: #ce0704; font-size: 13px; font-weight: 700; }
+  .about-principle.featured > span { color: #4ba674; }
+  .about-principle h3 { margin: auto 0 14px; color: inherit; font-size: 27px; line-height: 1.2; }
+  .about-principle p { margin: 0; color: #585858; font-size: 16px; line-height: 1.65; }
+  .about-principle.featured p { color: #ffffffad; }
+  .about-vision { padding: 100px max(24px, calc((100vw - 1280px) / 2)); display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: end; color: #fff; background: #111; border-top: 4px solid #046f36; }
+  .about-vision h2 { max-width: 690px; color: #fff; }
+  .about-vision > p { margin: 0; color: #ffffffb8; font-size: 18px; line-height: 1.75; }
+  .about-email { grid-column: 2; color: #fff; font-size: clamp(24px, 3vw, 38px); text-decoration-color: #ce0704; text-underline-offset: 8px; }
+  @media (max-width: 767px) {
+    .about-hero { min-height: 650px; }
+    .about-hero-content { width: calc(100% - 32px); padding-bottom: 42px; }
+    h1 { max-width: 100%; font-size: clamp(34px, 10vw, 40px); line-height: 1.12; }
+    .about-hero-content p { font-size: 16px; }
+    .about-intro, .about-principles { width: calc(100% - 32px); padding: 72px 0; }
+    .about-intro { grid-template-columns: 1fr; gap: 24px; }
+    .about-mark { justify-self: start; }
+    .about-principles-grid { grid-template-columns: 1fr; }
+    .about-principle { min-height: 280px; border-inline-end: 0; border-bottom: 1px solid #0000001a; }
+    .about-principle:last-child { border-bottom: 0; }
+    .about-vision { padding: 72px 16px; grid-template-columns: 1fr; gap: 30px; }
+    .about-email { grid-column: 1; }
+  }
+</style>

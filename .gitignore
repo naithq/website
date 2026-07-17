@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+theme/
+# Astro
+.astro/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+pnpm-debug.log*
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
