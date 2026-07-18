@@ -376,7 +376,7 @@ p {
 }
 
 h1.banner-title {
-  font-size: clamp(38px, 4.2vw, 60px);
+  font-size: clamp(32px, 3.4vw, 48px);
   line-height: 1.15;
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -713,7 +713,7 @@ h3.core-features-card-title {
 
   h1.banner-title {
     margin-bottom: 14px;
-    font-size: 34px;
+    font-size: 30px;
     line-height: 1.14;
   }
 
