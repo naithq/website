@@ -20,6 +20,22 @@ button {
   font-family: "SBC", sans-serif;
 }
 
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+  text-decoration: none !important;
+}
+
+.footer-underline-button {
+  display: none !important;
+}
+
+.integration-card-link-block {
+  border-bottom: 0 !important;
+}
+
 .navbar-logo-wrapper {
   gap: 10px;
   align-items: center;
@@ -773,6 +789,19 @@ html[dir="rtl"] .navbar-wrapper,
 html[dir="rtl"] .navbar-button-wrapper,
 html[dir="rtl"] .footer-bottom-content {
   direction: rtl;
+}
+
+html[dir="rtl"] .faq-accordion-title-wrap,
+html[dir="rtl"] .faq-accordion-ans-wrap,
+html[dir="rtl"] .faq-accordion-content-wrap,
+html[dir="rtl"] .faq-accordion-ans {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .faq-accordion-ans {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 /* Keep phone numbers / emails / codes readable */
