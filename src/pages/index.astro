@@ -350,6 +350,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
     <script is:inline>
       (() => {
+        const video = document.querySelector('.banner-scroll-video');
+        if (!video) return;
+
+        // Mobile autoplay can be blocked (e.g. battery saver); retry on
+        // visibility and resume on first interaction if still paused.
+        const tryPlay = () => {
+          if (video.paused) video.play().catch(() => {});
+        };
+
+        if ('IntersectionObserver' in window) {
+          new IntersectionObserver((entries) => {
+            entries.forEach((entry) => { if (entry.isIntersecting) tryPlay(); });
+          }, { threshold: .25 }).observe(video);
+        }
+
+        ['touchstart', 'click'].forEach((eventName) => {
+          document.addEventListener(eventName, tryPlay, { once: true, passive: true });
+        });
+      })();
+    </script>
+    <script is:inline>
+      (() => {
         const shell = document.querySelector('[data-hero-motion]');
         if (!shell || !window.matchMedia('(pointer: fine)').matches) return;
 

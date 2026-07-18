@@ -37,6 +37,11 @@ a:visited {
   display: none !important;
 }
 
+/* The sponsors strip was removed on /features; keep its dashed separator */
+.section.features-banner {
+  border-bottom: 1px dashed #0000001a;
+}
+
 .integration-card-link-block {
   border-bottom: 0 !important;
 }
