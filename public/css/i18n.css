@@ -161,6 +161,82 @@ a:visited {
   }
 }
 
+/* ============ Mobile friendliness ============ */
+/* Comfortable 44px+ touch targets and readable spacing on small screens. */
+@media screen and (max-width: 767px) {
+  .footer-menu-text-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .footer-menu-list {
+    grid-row-gap: 4px;
+  }
+
+  .menu-button.w-nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .lang-dropdown-btn {
+    min-height: 44px;
+  }
+
+  .lang-option {
+    min-height: 44px;
+  }
+
+  .nav-menu .nav-link {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+  }
+
+  .primary-button {
+    min-height: 48px;
+  }
+
+  .banner-button-wrapper,
+  .banner-button-wrapper .primary-button-wrapper,
+  .banner-button-wrapper .primary-button {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .banner-button-wrapper .primary-button {
+    justify-content: center;
+  }
+
+  .banner-button-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .footer-social-media-wrapper .social-media {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .faq-accordion-link {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .integration-card-link-block {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
 /* ============ Layout guards ============ */
 /* Decorative elements (e.g. .section-circle) poke a few px past the viewport.
    In RTL that side becomes scrollable and causes a horizontal scrollbar. */
