@@ -1,8 +1,0 @@
-Flag of Oman
-
-Source: https://commons.wikimedia.org/wiki/File:Flag_of_Oman.svg
-Original file: https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Oman.svg
-Description: Flag of Oman, 2004-present. Vectorized from qanoon.om.
-License: Open Government Licence - Oman 1.0
-License information: https://www.oman.om/en/home-footer-level/faq/open-government-licence-oman
-Downloaded: 2026-07-17

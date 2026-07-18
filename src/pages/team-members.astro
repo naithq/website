@@ -4,12 +4,38 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Team | National AI Technologies"
-  description="Meet the team behind National AI Technologies."
+  description="Meet the leadership behind National AI Technologies."
   pageId="6a56f7743d4c8a4daf3c592e"
   bodyAttrs={{"data-w-id": "6583dced790802aadfc7906c"}}
 >
   <Fragment slot="head">
     <style is:inline>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="6583dced790802aadfc7906c"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="c7b06f53-bf12-44c8-4f3f-04c47808f749"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="4fa26e73-e030-acde-9663-fd05721efac0"] {opacity:0;}}</style>
+    <style is:inline>
+      .team-member-grid.single {
+        grid-template-columns: repeat(3, minmax(0, 420px));
+        justify-content: center;
+      }
+
+      .team-member-grid.single .team-member-card {
+        border: 0;
+      }
+
+      .team-member-empty-card {
+        border: 1px dashed rgba(8, 10, 9, .22);
+        border-radius: 12px;
+        min-height: 100%;
+      }
+
+      @media (max-width: 767px) {
+        .team-member-grid.single {
+          grid-template-columns: minmax(0, 420px);
+        }
+
+        .team-member-empty-card {
+          min-height: 220px;
+        }
+      }
+    </style>
   </Fragment>
     <section class="section inner-banner">
       <div class="container section-padding">
@@ -30,90 +56,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <section class="section team-members background-none">
       <div class="container">
         <div data-w-id="c7b06f53-bf12-44c8-4f3f-04c47808f749" class="team-member-wrapper">
-          <div class="w-layout-grid team-member-grid">
-            <div class="team-member-card main">
+          <div class="w-layout-grid team-member-grid single">
+            <div class="team-member-card main border-none">
               <div class="team-member-single">
-                <div class="team-member-image-wrapper"><img src="/images/Team-Member-Image1.jpg" loading="lazy" alt="Team Member Image" class="team-member-image"></div>
+                <div class="team-member-image-wrapper"><img src="/images/Abdullah.jpg" loading="eager" alt="Abdullah Ali AlAlawi" class="team-member-image"></div>
                 <div class="team-member-typography">
                   <div class="team-member-name-bio">
-                    <div class="team-member-name color-change">Brian Herbert</div>
-                    <div class="team-member-bio">CEO &amp; funder</div>
+                    <div class="team-member-name color-change">Abdullah Ali AlAlawi</div>
+                    <div class="team-member-bio">Chairman and Founder</div>
                   </div>
-                  <a href="https://linkedin.com/" target="_blank" class="team-member-social-media main w-inline-block">
-                    <div></div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="team-member-card main middle">
-              <div class="team-member-single">
-                <div class="team-member-image-wrapper"><img src="/images/Team-Member-Image2.jpg" loading="lazy" alt="Team Member Image" class="team-member-image"></div>
-                <div class="team-member-typography">
-                  <div class="team-member-name-bio">
-                    <div class="team-member-name color-change">Brian Herbert</div>
-                    <div class="team-member-bio">CEO &amp; funder</div>
-                  </div>
-                  <a href="https://linkedin.com/" target="_blank" class="team-member-social-media main w-inline-block">
-                    <div></div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="team-member-card main border-mobile">
-              <div class="team-member-single">
-                <div class="team-member-image-wrapper"><img src="/images/Team-Member-Image3.jpg" loading="lazy" alt="Team Member Image" class="team-member-image"></div>
-                <div class="team-member-typography">
-                  <div class="team-member-name-bio">
-                    <div class="team-member-name color-change">Brian Herbert</div>
-                    <div class="team-member-bio">CEO &amp; funder</div>
-                  </div>
-                  <a href="https://linkedin.com/" target="_blank" class="team-member-social-media main w-inline-block">
-                    <div></div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="team-member-card main border-none border-mobile-bottom">
-              <div class="team-member-single">
-                <div class="team-member-image-wrapper"><img src="/images/Team-Member-Image4.jpg" loading="lazy" alt="Team Member Image" class="team-member-image"></div>
-                <div class="team-member-typography">
-                  <div class="team-member-name-bio">
-                    <div class="team-member-name color-change">Brian Herbert</div>
-                    <div class="team-member-bio">CEO &amp; funder</div>
-                  </div>
-                  <a href="https://linkedin.com/" target="_blank" class="team-member-social-media main w-inline-block">
-                    <div></div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="team-member-card main middle border-none">
-              <div class="team-member-single">
-                <div class="team-member-image-wrapper"><img src="/images/Team-Member-Image5.jpg" loading="lazy" alt="Team Member Image" class="team-member-image"></div>
-                <div class="team-member-typography">
-                  <div class="team-member-name-bio">
-                    <div class="team-member-name color-change">Brian Herbert</div>
-                    <div class="team-member-bio">CEO &amp; funder</div>
-                  </div>
-                  <a href="https://linkedin.com/" target="_blank" class="team-member-social-media main w-inline-block">
-                    <div></div>
-                  </a>
                 </div>
               </div>
             </div>
             <div class="team-member-card main border-none">
-              <div class="team-member-single">
-                <div class="team-member-image-wrapper"><img src="/images/Team-Member-Image6.jpg" loading="lazy" alt="Team Member Image" class="team-member-image"></div>
-                <div class="team-member-typography">
-                  <div class="team-member-name-bio">
-                    <div class="team-member-name color-change">Brian Herbert</div>
-                    <div class="team-member-bio">CEO &amp; funder</div>
-                  </div>
-                  <a href="https://linkedin.com/" target="_blank" class="team-member-social-media main w-inline-block">
-                    <div></div>
-                  </a>
-                </div>
-              </div>
+              <div class="team-member-empty-card" aria-hidden="true"></div>
+            </div>
+            <div class="team-member-card main border-none">
+              <div class="team-member-empty-card" aria-hidden="true"></div>
             </div>
           </div>
         </div>
