@@ -54,7 +54,7 @@
         var tr = lookup(current);
         if (tr) {
           if (orig === null) el.setAttribute("data-nait-orig-" + attr, current);
-          el.setAttribute(attr, tr);
+          if (el.getAttribute(attr) !== tr) el.setAttribute(attr, tr);
         }
       } else if (orig !== null) {
         el.setAttribute(attr, orig);
@@ -116,10 +116,19 @@
     observer = new MutationObserver(function (muts) {
       if (getLang() !== "ar" || !dict) return;
       muts.forEach(function (m) {
-        m.addedNodes.forEach(function (n) { walk(n, true); });
+        if (m.type === "attributes") {
+          handleElement(m.target, true);
+        } else {
+          m.addedNodes.forEach(function (n) { walk(n, true); });
+        }
       });
     });
-    observer.observe(document.body, { childList: true, subtree: true });
+    observer.observe(document.body, {
+      childList: true,
+      attributes: true,
+      attributeFilter: ATTRS,
+      subtree: true,
+    });
   }
 
   function apply(lang) {
