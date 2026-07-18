@@ -297,7 +297,7 @@ h3.core-features-card-title {
   padding: 0;
   background: #080a09;
   border: 0;
-  border-radius: 8px;
+  border-radius: 0;
   box-shadow: 0 24px 60px #10151024;
   backdrop-filter: none;
 }
