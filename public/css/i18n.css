@@ -168,6 +168,7 @@ a:visited {
     display: inline-flex;
     align-items: center;
     min-height: 44px;
+    min-width: 44px;
   }
 
   .footer-menu-list {
@@ -234,6 +235,29 @@ a:visited {
     display: inline-flex;
     align-items: center;
     min-height: 44px;
+  }
+
+  /* Small inline text links across content pages */
+  .about-email,
+  .authentication-description-text-link,
+  .authentication-text-link,
+  .authentication-form-checkbox-text-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  /* Icon links: team member and authentication social buttons */
+  .team-member-social-media,
+  .authentication-social-media {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Decorative micro-labels stay legible on small screens */
+  .core-features-element-button-text,
+  .core-features-year-text {
+    font-size: 11px;
   }
 }
 
