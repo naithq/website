@@ -180,12 +180,45 @@ a:visited {
     grid-row-gap: 4px;
   }
 
-  .menu-button.w-nav-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .navbar .menu-button.w-nav-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     min-width: 44px;
     min-height: 44px;
+    height: 44px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, .07);
+    border: 1px solid rgba(255, 255, 255, .18);
+    padding: 0;
+    transition: background-color .2s ease, border-color .2s ease;
+  }
+
+  .navbar .menu-button.w-nav-button:hover,
+  .navbar .menu-button.w--open {
+    background-color: rgba(255, 255, 255, .12);
+    border-color: rgba(255, 255, 255, .38);
+  }
+
+  .hamburger-menu-icon {
+    max-width: 22px;
+    height: 22px;
+    filter: invert(1);
+  }
+
+  .hamburger-menu-icon svg {
+    display: block;
+  }
+
+  .navbar .lang-dropdown-btn {
+    height: 44px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-button-wrapper {
+    grid-column-gap: 10px;
+    align-items: center;
   }
 
   .lang-dropdown-btn {
