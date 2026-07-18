@@ -96,6 +96,122 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         .hero-motion-surface,
         .hero-motion-surface .banner-scroll-video { transition: none; }
         .hero-motion-surface::before { animation: none; }
+        .hero-kicker::before { animation: none; }
+      }
+
+      /* ---- Hero typography refinements ---- */
+      .hero-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 7px 16px;
+        border: 1px solid rgba(8, 10, 9, .12);
+        border-radius: 100px;
+        background: rgba(255, 255, 255, .72);
+        box-shadow: 0 1px 0 rgba(8, 10, 9, .04);
+      }
+
+      .hero-kicker::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #ce0704;
+        box-shadow: 0 0 0 3px rgba(206, 7, 4, .14);
+        animation: hero-kicker-pulse 2.6s ease-out infinite;
+      }
+
+      @keyframes hero-kicker-pulse {
+        0%, 100% { box-shadow: 0 0 0 3px rgba(206, 7, 4, .16); }
+        50% { box-shadow: 0 0 0 6px rgba(206, 7, 4, .05); }
+      }
+
+      .hero-title-accent {
+        position: relative;
+        display: inline-block;
+      }
+
+      .banner-button-wrapper {
+        display: inline-flex;
+        align-items: center;
+        gap: 26px;
+      }
+
+      .hero-secondary-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 44px;
+        color: #14181f;
+        font-weight: 500;
+        font-size: 15px;
+      }
+
+      .hero-secondary-link-arrow {
+        display: inline-block;
+        transition: transform .25s ease;
+      }
+
+      .hero-secondary-link:hover .hero-secondary-link-arrow {
+        transform: translateX(4px);
+      }
+
+      html[dir="rtl"] .hero-secondary-link-arrow {
+        transform: scaleX(-1);
+      }
+
+      html[dir="rtl"] .hero-secondary-link:hover .hero-secondary-link-arrow {
+        transform: scaleX(-1) translateX(4px);
+      }
+
+      .hero-trust-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 26px;
+        margin: 30px 0 0;
+        padding: 22px 0 0;
+        border-top: 1px dashed rgba(8, 10, 9, .16);
+        list-style: none;
+      }
+
+      .hero-trust-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        color: #3d443f;
+        font-size: 13.5px;
+        font-weight: 500;
+        letter-spacing: .01em;
+      }
+
+      .hero-trust-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      .hero-trust-dot.red { background: #ce0704; }
+      .hero-trust-dot.green { background: #046f36; }
+      .hero-trust-dot.neutral { background: #7b7974; }
+
+      @media (max-width: 767px) {
+        .banner-button-wrapper {
+          width: 100%;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .hero-trust-row {
+          justify-content: center;
+          gap: 8px 18px;
+          margin-top: 24px;
+          padding-top: 18px;
+        }
+
+        .hero-trust-item {
+          font-size: 12.5px;
+        }
       }
     </style>
     <script is:inline type="application/ld+json">{
@@ -177,7 +293,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   </div>
                   <div class="banner-title-description">
                     <div class="overflow-hidden">
-                      <h1 data-w-id="972ac3a0-23a7-ce05-14a0-ef4b00c798cb" class="banner-title">Sovereign AI <span class="banner-title-span">for Oman.</span></h1>
+                      <h1 data-w-id="972ac3a0-23a7-ce05-14a0-ef4b00c798cb" class="banner-title">Sovereign AI <span class="banner-title-span hero-title-accent">for Oman.</span></h1>
                     </div>
                     <p data-w-id="31d19188-bc4f-d642-b14b-f95a0d7666b8" class="banner-description">Advanced AI for government and enterprise, secured entirely within Oman.</p>
                   </div>
@@ -195,7 +311,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                         <div class="primary-button-shape-bg"></div>
                       </div>
                     </div>
+                    <a href="/about-us" class="hero-secondary-link">Why NAIT<span class="hero-secondary-link-arrow" aria-hidden="true">→</span></a>
                   </div>
+                  <ul class="hero-trust-row" role="list">
+                    <li class="hero-trust-item"><span class="hero-trust-dot red" aria-hidden="true"></span>Sovereign hosting</li>
+                    <li class="hero-trust-item"><span class="hero-trust-dot green" aria-hidden="true"></span>Arabic-first intelligence</li>
+                    <li class="hero-trust-item"><span class="hero-trust-dot neutral" aria-hidden="true"></span>Oman Vision 2040</li>
+                  </ul>
                 </div>
                 <div class="banner-image-wrapper">
                   <div class="banner-image-content">

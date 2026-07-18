@@ -32,6 +32,11 @@ a:visited {
   display: none !important;
 }
 
+/* No colored glow behind primary buttons */
+.primary-button-shape {
+  display: none !important;
+}
+
 .integration-card-link-block {
   border-bottom: 0 !important;
 }
@@ -472,9 +477,9 @@ h3.core-features-card-title {
 }
 
 .banner-subtitle-single.hero-kicker {
-  border: 0;
-  border-radius: 0;
-  padding: 0;
+  border: 1px solid rgba(8, 10, 9, .12);
+  border-radius: 100px;
+  padding: 7px 16px;
 }
 
 .hero-kicker .banner-subtitle {
