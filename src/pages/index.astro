@@ -118,30 +118,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   </div>
                 </div>
               </div>
-              <div class="banner-bottom-content">
+              <div class="banner-bottom-content banner-video-section">
                 <div class="banner-table-wrapper">
-                  <div class="banner-table-menu-wrapper">
-                    <div class="banner-table-menu-wrap">
-                      <div class="w-layout-grid banner-table-menu-grid">
-                        <div class="banner-table-menu-single">
-                          <div class="banner-table-menu-single-content">
-                            <div class="banner-table-menu-icon-wrapper"><img src="/images/Features-Menu-Tab-Menu-Active-Icon1.svg" loading="lazy" alt="Banner Table Menu Icon" class="banner-table-menu-icon"></div>
-                            <div class="banner-table-menu-text">Sovereign AI</div>
-                          </div>
-                        </div>
-                        <div class="banner-table-menu-single">
-                          <div class="banner-table-menu-single-content">
-                            <div class="banner-table-menu-icon-wrapper"><img src="/images/Banner-Table-Menu-Icon2.svg" loading="lazy" alt="Banner Table Menu Icon" class="banner-table-menu-icon two"><img src="/images/Banner-Table-Menu-Active-Icon2.svg" loading="lazy" alt="Banner Table Menu Icon" class="banner-table-menu-active-icon two"></div>
-                            <div class="banner-table-menu-text two">NAIT LLM</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="banner-table-menu-shape"></div>
-                    </div>
-                  </div>
                   <div class="banner-table-content">
-                    <div class="banner-table-content-single"><img src="/images/image1.webp" loading="lazy" alt="NAIT AI Agents interface" class="banner-table-image ai-agents"><img src="/images/image2.webp" loading="lazy" alt="NAIT AI Chatbot interface" class="banner-table-image ai-chatbot"></div>
-                    <div data-w-id="e9e0ab97-e418-6002-74e6-7528cf5ebc3e" class="banner-table-shape"></div>
+                    <div class="banner-table-content-single banner-video-frame">
+                      <video class="banner-scroll-video" src="/vid.mp4" autoplay muted loop playsinline preload="metadata" aria-label="NAIT sovereign AI platform demonstration"></video>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -156,7 +138,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="container">
         <div class="sponsors-wrapper">
           <div class="sponsors-title-wrapper">
-            <div class="sponsors-title">Trusted by government institutions, enterprises &amp; academia across Oman</div>
+            <div class="sponsors-title">Trusted across Oman</div>
           </div>
           <div class="sponsors-ticker">
             <div class="sponsors-ticker-content">
@@ -517,7 +499,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="section-line color-change right"></div>
       </div>
     </section>
-    <section data-w-id="cd6c060e-0fd2-2dce-33a1-e98cc160b0da" class="section features">
+    <section data-w-id="cd6c060e-0fd2-2dce-33a1-e98cc160b0da" class="section features" hidden>
       <div class="features-main-content">
         <div class="container section-padding">
           <div data-w-id="4caa03e8-d193-047a-1f00-c9ee2dd613bd" class="section-title-wrapper features">
@@ -817,7 +799,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="section-line right"></div>
       </div>
     </section>
-    <section class="section testimonial">
+    <section class="section testimonial" hidden>
       <div class="container section-padding">
         <div data-w-id="f405738a-e617-69cd-a117-d90dc44d6c96" class="section-title-wrapper">
           <div class="subtile-wrapper">
@@ -947,7 +929,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="section-line right"></div>
       </div>
     </section>
-    <div class="blank-div-wrapper border-none">
+    <div class="blank-div-wrapper border-none" hidden>
       <div class="container">
         <div class="blank-div">
           <div class="section-circle left"></div>
@@ -1063,7 +1045,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="section-line right"></div>
       </div>
     </div>
-    <section data-wf--faq--variant="base" class="section faq">
+    <section data-wf--faq--variant="base" class="section faq" hidden>
       <div class="container section-padding">
         <div data-w-id="7103a37d-0392-48be-e77e-0e752c877353" class="section-title-wrapper">
           <div class="subtile-wrapper">
@@ -1175,7 +1157,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="section-line right"></div>
       </div>
     </section>
-        <div class="blank-div-wrapper border-none">
+    <section class="section faq-replacement">
+      <div class="container">
+        <div class="faq-replacement-content">
+          <div class="faq-replacement-copy">
+            <div class="subtile">Your next step</div>
+            <h2>Built around your priorities.</h2>
+            <p>Tell us what you need. We’ll show you what sovereign AI can deliver.</p>
+          </div>
+          <a href="/contact-us" class="faq-replacement-link">Talk to Our Team</a>
+        </div>
+      </div>
+    </section>
+        <div class="blank-div-wrapper border-none" hidden>
       <div class="container">
         <div class="blank-div">
           <div class="section-circle left"></div>
