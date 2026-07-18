@@ -1,4 +1,4 @@
-/* Tailwind v4 — utilities only (no preflight, to keep the Webflow CSS intact). */
+/* Tailwind v4 - utilities only (no preflight, to keep the Webflow CSS intact). */
 @layer theme, utilities;
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);

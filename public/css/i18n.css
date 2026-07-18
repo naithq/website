@@ -245,6 +245,46 @@ h3.core-features-card-title {
   font-size: 14px;
 }
 
+.banner-subtitle-single.hero-kicker {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+.hero-kicker .banner-subtitle {
+  color: var(--title-color);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 479px) {
+  .banner-typography {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .banner-subtitle-wrapper {
+    margin-bottom: 14px;
+  }
+
+  .hero-kicker .banner-subtitle {
+    font-size: 11px;
+  }
+
+  h1.banner-title {
+    margin-bottom: 14px;
+    font-size: 34px;
+    line-height: 1.14;
+  }
+
+  .banner-description {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+}
+
 .section.core-features {
   overflow: clip;
 }

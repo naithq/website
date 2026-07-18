@@ -1,4 +1,4 @@
-/* NAIT bilingual engine (EN ⇄ AR) — dictionary-based DOM translation.
+/* NAIT bilingual engine (EN ⇄ AR) - dictionary-based DOM translation.
    - Instant switching, no page reload
    - Persists choice in localStorage ("nait-lang")
    - RTL + Arabic typography via html[lang]/[dir]
