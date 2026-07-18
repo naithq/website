@@ -28,11 +28,49 @@ button {
 }
 
 .navbar-wordmark {
-  color: var(--title-color);
+  color: #fff;
   font-size: 22px;
   line-height: 1;
   font-weight: 700;
   letter-spacing: 0;
+}
+
+/* ============ Dark navigation ============ */
+.navbar {
+  background: rgba(8, 10, 9, .96);
+  border-bottom-color: rgba(255, 255, 255, .14);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, .14);
+  backdrop-filter: blur(16px);
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255, .72);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.w--current {
+  color: #fff;
+}
+
+.navbar .nav-link.w--current {
+  background-image: none;
+  padding-left: 0;
+}
+
+.navbar .lang-dropdown-btn {
+  color: rgba(255, 255, 255, .84);
+  border-color: rgba(255, 255, 255, .18);
+  background: rgba(255, 255, 255, .07);
+}
+
+.navbar .lang-dropdown-btn:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, .38);
+  background: rgba(255, 255, 255, .12);
+}
+
+.navbar .section-line {
+  border-color: rgba(255, 255, 255, .12);
 }
 
 /* ============ Layout guards ============ */

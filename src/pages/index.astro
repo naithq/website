@@ -9,6 +9,95 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 >
   <Fragment slot="head">
     <style is:inline>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="6583dc7e043fa8662865e329"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="d2b5045a-592c-e5b2-a353-4bffc9ea3da9"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="a50f4ae0-b2ea-a3dd-38e5-714437cfc9ce"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="884131f3-1c40-f269-808f-c894a7cc7fb1"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="1c7bbb3b-e3c1-e99c-8b89-57b734d5f87f"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="4caa03e8-d193-047a-1f00-c9ee2dd613bd"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="623f120a-e816-8b45-7a4b-50974808671b"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="0b797c75-49aa-4a7a-7119-0a9d64837e78"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="f405738a-e617-69cd-a117-d90dc44d6c96"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="f405738a-e617-69cd-a117-d90dc44d6c9e"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="47961579-d2c8-f855-75fd-580480a46526"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="cb37c86e-0958-721a-5323-b9bc64a8d2a6"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="341acf21-cbec-e68b-9308-50b5268920bb"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="ec61225c-ad23-4842-c51a-62558e2c01b4"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="c9cc0609-d6ab-6b2d-3042-91503a55efd9"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="972ac3a0-23a7-ce05-14a0-ef4b00c798cb"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="31d19188-bc4f-d642-b14b-f95a0d7666b8"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="ec794da6-bc98-565b-28b0-15cfa6f940f5"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="e9e0ab97-e418-6002-74e6-7528cf5ebc3e"] {width:100%;height:100%;display:block;opacity:1;}html.w-mod-js:not(.w-mod-ix) [data-w-id="912b622b-c2b7-ca8c-a357-71c47236e2d5"] {opacity:0;}}</style>
+    <style is:inline>
+      .hero-motion-shell {
+        --pointer-x: 50%;
+        --pointer-y: 50%;
+        --tilt-x: 0deg;
+        --tilt-y: 0deg;
+        position: relative;
+        perspective: 1200px;
+        isolation: isolate;
+      }
+
+      .hero-motion-surface {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, .16);
+        transform: rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+        transform-style: preserve-3d;
+        transition: transform .18s ease-out, box-shadow .35s ease;
+        will-change: transform;
+      }
+
+      .hero-motion-shell:hover .hero-motion-surface {
+        box-shadow: 0 34px 90px rgba(4, 18, 12, .28), 0 0 0 1px rgba(4, 111, 54, .14);
+      }
+
+      .hero-motion-surface::before,
+      .hero-motion-surface::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .hero-motion-surface::before {
+        background:
+          linear-gradient(rgba(255, 255, 255, .055) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, .055) 1px, transparent 1px);
+        background-size: 52px 52px;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, .85), transparent 75%);
+        opacity: .45;
+        animation: hero-grid-drift 14s linear infinite;
+      }
+
+      .hero-motion-surface::after {
+        background: radial-gradient(circle 260px at var(--pointer-x) var(--pointer-y), rgba(255, 255, 255, .2), rgba(4, 111, 54, .08) 38%, transparent 72%);
+        mix-blend-mode: screen;
+        opacity: .85;
+      }
+
+      .hero-motion-surface .banner-scroll-video {
+        transition: transform .35s ease-out, filter .35s ease;
+      }
+
+      .hero-motion-shell:hover .banner-scroll-video {
+        transform: scale(1.025);
+        filter: saturate(1.08) contrast(1.03);
+      }
+
+      .hero-data-lines {
+        position: absolute;
+        z-index: 3;
+        inset: 0;
+        pointer-events: none;
+        background:
+          linear-gradient(90deg, #ce0704, #ce0704) 20px 20px / 42px 1px no-repeat,
+          linear-gradient(#ce0704, #ce0704) 20px 20px / 1px 42px no-repeat,
+          linear-gradient(270deg, #046f36, #046f36) calc(100% - 20px) calc(100% - 20px) / 42px 1px no-repeat,
+          linear-gradient(0deg, #046f36, #046f36) calc(100% - 20px) calc(100% - 20px) / 1px 42px no-repeat;
+        opacity: .9;
+        transform: translate3d(calc((var(--pointer-x) - 50%) * .025), calc((var(--pointer-y) - 50%) * .025), 24px);
+      }
+
+      @keyframes hero-grid-drift {
+        to { background-position: 52px 52px; }
+      }
+
+      @media (max-width: 767px) {
+        .hero-motion-surface { transform: none; }
+        .hero-motion-surface::after { background-position: center; }
+        .hero-data-lines { transform: none; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hero-motion-surface,
+        .hero-motion-surface .banner-scroll-video { transition: none; }
+        .hero-motion-surface::before { animation: none; }
+      }
+    </style>
     <script is:inline type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -121,8 +210,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <div class="banner-bottom-content banner-video-section">
                 <div class="banner-table-wrapper">
                   <div class="banner-table-content">
-                    <div class="banner-table-content-single banner-video-frame">
+                    <div class="hero-motion-shell" data-hero-motion>
+                    <div class="banner-table-content-single banner-video-frame hero-motion-surface">
                       <video class="banner-scroll-video" src="/vid.mp4" autoplay muted loop playsinline preload="metadata" aria-label="NAIT sovereign AI platform demonstration"></video>
+                      <span class="hero-data-lines" aria-hidden="true"></span>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -134,6 +226,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
       </div>
     </section>
+    <script is:inline>
+      (() => {
+        const shell = document.querySelector('[data-hero-motion]');
+        if (!shell || !window.matchMedia('(pointer: fine)').matches) return;
+
+        shell.addEventListener('pointermove', (event) => {
+          const bounds = shell.getBoundingClientRect();
+          const x = (event.clientX - bounds.left) / bounds.width;
+          const y = (event.clientY - bounds.top) / bounds.height;
+          shell.style.setProperty('--pointer-x', `${x * 100}%`);
+          shell.style.setProperty('--pointer-y', `${y * 100}%`);
+          shell.style.setProperty('--tilt-x', `${(0.5 - y) * 4}deg`);
+          shell.style.setProperty('--tilt-y', `${(x - 0.5) * 4}deg`);
+        });
+
+        shell.addEventListener('pointerleave', () => {
+          shell.style.setProperty('--pointer-x', '50%');
+          shell.style.setProperty('--pointer-y', '50%');
+          shell.style.setProperty('--tilt-x', '0deg');
+          shell.style.setProperty('--tilt-y', '0deg');
+        });
+      })();
+    </script>
     <section class="section sponsors">
       <div class="container">
         <div class="sponsors-wrapper">
