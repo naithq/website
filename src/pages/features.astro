@@ -12,8 +12,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <style is:inline>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="6583dce2e5dc2ac378119f6d"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="a34dc770-4a6d-1892-28c0-9aee6f47f988"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="3728f193-9e18-e6b2-3c42-4b8e0cd3d98e"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="7e5c6abd-8435-7038-2381-6be8fcd5e51e"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="8d129773-5987-dfbd-931e-10845fa38b5c"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="4941897f-90e6-4149-cfd7-b7cf3901c451"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="3258f584-c586-4f7c-f3c7-3354c1d3c420"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="c1f6c245-9e4a-7010-ded8-fe5afa37780d"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="7e26844c-e4cd-93db-750c-422dd27b20ec"] {opacity:0;}}</style>
   </Fragment>
     <section data-w-id="541d9935-869d-4097-3766-34358ae61a61" class="section features-banner">
-      <div class="container section-padding">
-        <div class="features-banner-content">
+      <div class="container section-padding" style="position:relative; overflow:hidden;">
+        <div class="nait-aurora" aria-hidden="true">
+          <div class="nait-aurora__grid"></div>
+        </div>
+        <div class="features-banner-content" style="position:relative; z-index:1;">
           <div data-w-id="7e5c6abd-8435-7038-2381-6be8fcd5e51e" class="features-banner-typography">
             <div class="subtile-wrapper">
               <div class="subtile-single"><img src="/images/Subtile-Element.svg" loading="lazy" alt="Subtile Icon" class="subtile-icon">
@@ -38,7 +41,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </div>
             </div>
           </div>
-          <div class="features-product-showcase">
+          <div class="features-product-showcase" data-reveal-group>
             <figure class="features-product-view">
               <figcaption>Sovereign AI</figcaption>
               <img src="/images/image1.webp" loading="eager" alt="NAIT sovereign AI workspace" class="features-product-image">
@@ -408,12 +411,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </section>
     <section class="section platform-principles">
       <div class="container section-padding">
-        <div class="platform-principles-heading">
+        <div class="platform-principles-heading" data-reveal>
           <div class="subtile">Why NAIT</div>
           <h2>Built for real-world deployment.</h2>
           <p>Secure, practical AI designed around Oman’s institutions, data, and ambitions.</p>
         </div>
-        <div class="platform-principles-grid">
+        <div class="platform-principles-grid" data-reveal-group>
           <div class="platform-principle">
             <span>01</span>
             <h3>Omani by design</h3>

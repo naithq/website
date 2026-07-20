@@ -1,12 +1,12 @@
 <main class="contact-page">
   <section class="contact-hero">
-    <div class="contact-hero-heading">
+    <div class="contact-hero-heading" data-reveal>
       <div class="contact-kicker">Contact NAIT</div>
       <h1>Building Oman’s intelligent future.</h1>
     </div>
     <div class="contact-hero-footer">
-      <p>Tell us about your institution, the challenge you are solving, and the outcome you need. Our team will connect you with the right sovereign AI capability.</p>
-      <a href="mailto:contact@nait.om" class="contact-email-block">
+      <p data-reveal="left">Tell us about your institution, the challenge you are solving, and the outcome you need. Our team will connect you with the right sovereign AI capability.</p>
+      <a href="mailto:contact@nait.om" class="contact-email-block" data-reveal="right" data-magnetic="10">
         <span>Direct email</span>
         <strong>contact@nait.om</strong>
         <small>Typical response within two business days</small>
@@ -15,17 +15,17 @@
   </section>
 
   <section class="contact-main">
-    <div class="contact-context">
+    <div class="contact-context" data-reveal="left">
       <div class="contact-kicker dark">Start a conversation</div>
       <h2>Share the essentials.</h2>
-      <div class="contact-paths">
+      <div class="contact-paths" data-reveal-group>
         <div><span>01</span><p>Government and public services</p></div>
         <div><span>02</span><p>Enterprise AI and automation</p></div>
         <div><span>03</span><p>Research and academic partnerships</p></div>
       </div>
     </div>
 
-    <form class="contact-form" id="nait-contact-form">
+    <form class="contact-form" id="nait-contact-form" data-reveal="right">
       <div class="contact-field-row">
         <label>Full name<input name="name" type="text" autocomplete="name" required placeholder="Your name" /></label>
         <label>Work email<input name="email" type="email" autocomplete="email" required placeholder="name@organization.om" /></label>
@@ -58,8 +58,12 @@
 <style>
   :global(.contact-page ~ .cta-footer > .section.cta) { display: none; }
   .contact-page { color: #222; background: #f7f7f6; overflow: hidden; }
-  .contact-hero { padding: 138px max(24px, calc((100vw - 1280px) / 2)) 72px; border-bottom: 1px solid #0000001a; background-color: #fafafa; background-image: radial-gradient(#7b797426 1px, transparent 1px); background-size: 18px 18px; }
+  .contact-hero { position: relative; overflow: hidden; padding: 138px max(24px, calc((100vw - 1280px) / 2)) 72px; border-bottom: 1px solid #0000001a; background-color: #fafafa; background-image: radial-gradient(#7b797426 1px, transparent 1px); background-size: 18px 18px; }
+  .contact-hero-heading, .contact-hero-footer { position: relative; z-index: 1; }
   .contact-hero-heading { max-width: 1080px; }
+  .contact-form button { position: relative; overflow: hidden; }
+  .contact-form button span { display: inline-block; transition: transform .25s ease; }
+  .contact-form button:hover span { transform: translateX(4px); }
   .contact-kicker { margin-bottom: 18px; color: #ce0704; font-size: 12px; line-height: 1.4; font-weight: 700; text-transform: uppercase; }
   .contact-kicker.dark { color: #505050; }
   h1 { max-width: 1000px; margin: 0; color: #222; font-size: clamp(46px, 5vw, 70px); line-height: 1.06; font-weight: 600; text-wrap: balance; }

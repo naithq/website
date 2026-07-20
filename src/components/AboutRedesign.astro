@@ -3,31 +3,31 @@
     <img src="/images/oman.webp" alt="Omani architecture" class="about-hero-image" />
     <div class="about-hero-overlay"></div>
     <div class="about-hero-content">
-      <div class="about-kicker">National AI Technologies</div>
-      <h1>Oman’s intelligence. Built for Oman.</h1>
-      <p>NAIT builds sovereign AI infrastructure and products that help government, enterprise, and academia move with confidence while keeping data, capability, and value inside the Sultanate.</p>
-      <a href="/contact-us" class="about-primary-link">Partner with NAIT <span aria-hidden="true">→</span></a>
+      <div class="about-kicker hero-kicker-anim" data-reveal>National AI Technologies</div>
+      <h1 data-reveal style="--reveal-delay:.08s">Oman’s intelligence. Built for Oman.</h1>
+      <p data-reveal style="--reveal-delay:.16s">NAIT builds sovereign AI infrastructure and products that help government, enterprise, and academia move with confidence while keeping data, capability, and value inside the Sultanate.</p>
+      <a href="/contact-us" class="about-primary-link" data-reveal data-magnetic="14" style="--reveal-delay:.24s">Partner with NAIT <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
   <section class="about-intro">
-    <div class="about-intro-label">Our purpose</div>
-    <div class="about-intro-copy">
+    <div class="about-intro-label" data-reveal="left">Our purpose</div>
+    <div class="about-intro-copy" data-reveal>
       <h2>A national technology company with a clear mandate.</h2>
       <p>We translate advanced AI into secure, practical systems for Oman. From Arabic-first intelligence to predictive platforms and governed data infrastructure, every capability is designed around national priorities and Oman Vision 2040.</p>
     </div>
-    <div class="about-mark" aria-hidden="true">
+    <div class="about-mark" data-reveal="right" aria-hidden="true">
       <img src="/images/logo-header.png" alt="" />
       <span>NAIT</span>
     </div>
   </section>
 
   <section class="about-principles">
-    <div class="about-section-heading">
+    <div class="about-section-heading" data-reveal>
       <div class="about-kicker dark">How we work</div>
       <h2>Designed for lasting national value.</h2>
     </div>
-    <div class="about-principles-grid">
+    <div class="about-principles-grid" data-reveal-group>
       <article class="about-principle">
         <span>01</span>
         <h3>Sovereign by design</h3>
@@ -47,12 +47,12 @@
   </section>
 
   <section class="about-vision">
-    <div class="about-vision-copy">
+    <div class="about-vision-copy" data-reveal="left">
       <div class="about-kicker">Oman Vision 2040</div>
       <h2>Technology that strengthens the nation behind it.</h2>
     </div>
-    <p>Our measure of progress is not technology alone. It is faster public services, stronger institutions, more competitive businesses, and a generation of Omani talent equipped to lead the AI economy.</p>
-    <a href="mailto:contact@nait.om" class="about-email">contact@nait.om</a>
+    <p data-reveal>Our measure of progress is not technology alone. It is faster public services, stronger institutions, more competitive businesses, and a generation of Omani talent equipped to lead the AI economy.</p>
+    <a href="mailto:contact@nait.om" class="about-email" data-reveal="right" data-magnetic="10">contact@nait.om</a>
   </section>
 </main>
 
@@ -90,7 +90,9 @@
   .about-vision { padding: 100px max(24px, calc((100vw - 1280px) / 2)); display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: end; color: #fff; background: #111; border-top: 4px solid #046f36; }
   .about-vision h2 { max-width: 690px; color: #fff; }
   .about-vision > p { margin: 0; color: #ffffffb8; font-size: 18px; line-height: 1.75; }
-  .about-email { grid-column: 2; color: #fff; font-size: clamp(24px, 3vw, 38px); text-decoration-color: #ce0704; text-underline-offset: 8px; }
+  .about-email { grid-column: 2; display: inline-block; color: #fff; font-size: clamp(24px, 3vw, 38px); text-decoration-color: #ce0704; text-underline-offset: 8px; }
+  .about-mark img { transition: transform .6s cubic-bezier(.16,1,.3,1); }
+  .about-mark:hover img { transform: rotate(-8deg) scale(1.05); }
   @media (max-width: 767px) {
     .about-hero { min-height: 650px; }
     .about-hero-content { width: calc(100% - 32px); padding-bottom: 42px; }

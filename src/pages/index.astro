@@ -213,6 +213,74 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           font-size: 12.5px;
         }
       }
+
+      /* ---- Hero rebuild: aurora backdrop, chips, magnetic CTA, scroll cue ---- */
+      .banner-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-kicker {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-kicker::after {
+        content: "";
+        position: absolute;
+        inset-block: 0;
+        inset-inline-start: -60%;
+        width: 40%;
+        background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .75), transparent);
+        animation: hero-kicker-sheen 5s ease-in-out infinite;
+      }
+
+      @keyframes hero-kicker-sheen {
+        0% { inset-inline-start: -60%; }
+        45%, 100% { inset-inline-start: 130%; }
+      }
+
+      [data-magnetic] {
+        display: inline-flex;
+      }
+
+      .hero-motion-shell {
+        margin-top: 6px;
+      }
+
+      .hero-chip-field {
+        position: absolute;
+        inset: 0;
+        z-index: 5;
+        pointer-events: none;
+      }
+
+      .hero-chip-field .nait-chip {
+        pointer-events: auto;
+      }
+
+      .hero-chip-field .nait-chip.one {
+        top: -18px;
+        inset-inline-start: 4%;
+        animation-delay: 0s;
+      }
+
+      .hero-chip-field .nait-chip.two {
+        top: 22%;
+        inset-inline-end: -14px;
+        animation-delay: 1.4s;
+      }
+
+      .hero-chip-field .nait-chip.three {
+        bottom: -16px;
+        inset-inline-start: 30%;
+        animation-delay: 2.8s;
+      }
+
+      @media (max-width: 900px) {
+        .hero-chip-field { display: none; }
+      }
+
     </style>
     <script is:inline type="application/ld+json">{
   "@context": "https://schema.org",
@@ -283,6 +351,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div data-w-id="7573ff2f-3edb-b045-6a40-65c8f12f19ec" class="banner-vh">
         <div class="banner-sticky">
           <div class="container banner">
+            <div class="nait-aurora" aria-hidden="true">
+              <div class="nait-aurora__grid"></div>
+            </div>
             <div class="banner-content">
               <div class="banner-top-content">
                 <div class="banner-typography">
@@ -299,7 +370,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   </div>
                   <div class="banner-button-wrapper">
                     <div data-w-id="ec794da6-bc98-565b-28b0-15cfa6f940f5" class="primary-button-wrapper">
-                      <a data-wf--primary-button--variant="base" data-w-id="06c54131-d595-78fe-1aa0-c86ac06425eb" href="/contact-us" class="primary-button w-inline-block">
+                      <a data-wf--primary-button--variant="base" data-w-id="06c54131-d595-78fe-1aa0-c86ac06425eb" data-magnetic="16" href="/contact-us" class="primary-button w-inline-block">
                         <div class="primary-button-single in">
                           <div class="button-text">Explore the Platform</div><img src="/images/Primary-Button-Arrow.svg" loading="lazy" alt="arrow" class="button-arrow">
                         </div>
@@ -336,6 +407,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                     <div class="banner-table-content-single banner-video-frame hero-motion-surface">
                       <video class="banner-scroll-video" src="/vid.mp4" autoplay muted loop playsinline preload="metadata" aria-label="NAIT sovereign AI platform demonstration"></video>
                       <span class="hero-data-lines" aria-hidden="true"></span>
+                    </div>
+                    <div class="hero-chip-field" aria-hidden="true">
+                      <span class="nait-chip one"><span class="nait-chip__dot" style="background:#046f36"></span>100% Omani-built</span>
+                      <span class="nait-chip two"><span class="nait-chip__dot" style="background:#ce0704"></span>Sovereign hosting</span>
+                      <span class="nait-chip three"><span class="nait-chip__dot" style="background:#14181f"></span>Arabic-first AI</span>
                     </div>
                     </div>
                   </div>
@@ -375,6 +451,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         const shell = document.querySelector('[data-hero-motion]');
         if (!shell || !window.matchMedia('(pointer: fine)').matches) return;
 
+        const chips = shell.querySelectorAll('.hero-chip-field .nait-chip');
+
         shell.addEventListener('pointermove', (event) => {
           const bounds = shell.getBoundingClientRect();
           const x = (event.clientX - bounds.left) / bounds.width;
@@ -383,6 +461,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           shell.style.setProperty('--pointer-y', `${y * 100}%`);
           shell.style.setProperty('--tilt-x', `${(0.5 - y) * 4}deg`);
           shell.style.setProperty('--tilt-y', `${(x - 0.5) * 4}deg`);
+          chips.forEach((chip, i) => {
+            const depth = (i + 1) * 6;
+            chip.style.setProperty('--chip-parallax-x', `${(x - 0.5) * depth}px`);
+            chip.style.setProperty('--chip-parallax-y', `${(y - 0.5) * depth}px`);
+          });
         });
 
         shell.addEventListener('pointerleave', () => {
@@ -390,6 +473,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           shell.style.setProperty('--pointer-y', '50%');
           shell.style.setProperty('--tilt-x', '0deg');
           shell.style.setProperty('--tilt-y', '0deg');
+          chips.forEach((chip) => {
+            chip.style.setProperty('--chip-parallax-x', '0px');
+            chip.style.setProperty('--chip-parallax-y', '0px');
+          });
         });
       })();
     </script>
@@ -435,7 +522,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
           </div>
           <div class="about-us-bottom-content">
-            <div class="w-layout-grid about-us-bottom-grid">
+            <div class="w-layout-grid about-us-bottom-grid" data-reveal-group>
               <div class="about-us-card bottom-border">
                 <div class="about-us-card-title-wrapper">
                   <div class="about-us-card-title">Faster public services</div>
@@ -1184,7 +1271,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="home-integrations-wrapper">
             <div class="home-integrations-flex">
               <div class="home-integrations-shape" data-w-id="2c3396bd-4560-26bb-36b1-72763b7f67bb" data-animation-type="lottie" data-src="/documents/Warmhole-v.1.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="6.683333333333334" data-duration="0" data-loading="eager"></div>
-              <div class="home-integrations-left-wrapper">
+              <div class="home-integrations-left-wrapper" data-reveal="left">
                 <div class="home-integrations-icon-wrap one">
                   <div class="home-integrations-icon-box one"></div>
                   <div class="home-integrations-icon-box two"><img src="/images/Home-Integrations-Icon3.svg" loading="lazy" alt="Home Integrations Icon" class="home-integrations-icon"></div>
@@ -1205,7 +1292,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   <div class="home-integrations-icon-box four last"><img src="/images/Home-Integrations-Icon8.svg" loading="lazy" alt="Home Integrations Icon" class="home-integrations-icon"></div>
                 </div>
               </div>
-              <div class="home-integrations-middle-content">
+              <div class="home-integrations-middle-content" data-reveal="scale">
                 <div class="home-integrations-main-icon-wrap"><img src="/images/Home-Integrations-Main-Icon.svg" loading="lazy" alt="Home Integrations Main Icon" class="home-integrations-main-icon"></div>
                 <div class="home-integrations-subtitle-title-wrap integrations">
                   <div class="subtile-wrapper">
@@ -1245,7 +1332,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   </a>
                 </div>
               </div>
-              <div class="home-integrations-right-wrapper">
+              <div class="home-integrations-right-wrapper" data-reveal="right">
                 <div class="home-integrations-right-top-content">
                   <div class="home-integrations-icon-wrap one">
                     <div class="home-integrations-icon-box one"><img src="/images/Home-Integrations-Icon9.svg" loading="lazy" alt="Home Integrations Icon" class="home-integrations-icon"></div>
@@ -1397,14 +1484,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </section>
     <section class="section faq-replacement">
-      <div class="container">
-        <div class="faq-replacement-content">
+      <div class="container" style="position:relative;">
+        <div class="faq-replacement-content" data-reveal style="position:relative;">
           <div class="faq-replacement-copy">
             <div class="subtile">Your next step</div>
             <h2>Built around your priorities.</h2>
             <p>Tell us what you need. We’ll show you what sovereign AI can deliver.</p>
           </div>
-          <a href="/contact-us" class="faq-replacement-link">Talk to Our Team</a>
+          <a href="/contact-us" class="faq-replacement-link" data-magnetic="14">Talk to Our Team</a>
         </div>
       </div>
     </section>
