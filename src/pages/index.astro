@@ -281,6 +281,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         .hero-chip-field { display: none; }
       }
 
+      /* The new "Expanding the Platform" row added extra content to the
+         core-features section; trim the fixed bottom padding that was
+         tuned for the shorter version so the gap before the next section
+         doesn't double up. */
+      .core-features-content {
+        padding-bottom: 20px;
+      }
+
+      /* .container.section-padding bakes in a 185px top padding meant to
+         clear the fixed navbar on a page's first section. Reused mid-page
+         (e.g. the Process section right after Core Features), that same
+         value leaves a huge dead gap - trim it down here. */
+      .section.process > .container.section-padding {
+        padding-top: 80px;
+      }
     </style>
     <script is:inline type="application/ld+json">{
   "@context": "https://schema.org",
@@ -342,7 +357,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       "Comprehensive Integration - Build agent's knowledge from various sources",
       "AI Website Agent - Answer customers' questions with an agent trained on your website",
       "AI Phone Agent - Human-like voice agents answer questions, qualify leads and schedule appointments",
-      "AI Messaging Agent - Personalized experience on customers' favorite messaging platforms"
+      "AI Messaging Agent - Personalized experience on customers' favorite messaging platforms",
+      "Quantum Computing - Quantum-ready infrastructure for national-scale optimization, simulation, and cryptography",
+      "Islamic Digital Transactions - Sharia-compliant digital transaction infrastructure for Islamic finance",
+      "Tokenization - Secure, sovereign-hosted tokenization of real-world assets"
     ]
   }
 }</script>
@@ -815,6 +833,42 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                         <div class="button-text">Partner With Us</div><img src="/images/Arrow.svg" loading="lazy" alt="arrow" class="button-arrow w-variant-7853504c-a3d2-92e9-61a5-ab0aa214196a">
                       </div>
                     </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="core-features-expansion" style="margin-top:24px;">
+            <div class="subtile-wrapper" data-reveal>
+              <div class="subtile-single"><img src="/images/Subtile-Element.svg" loading="lazy" alt="Subtile Icon" class="subtile-icon">
+                <div class="subtile white-color">Expanding the Platform</div>
+              </div>
+            </div>
+            <div class="w-layout-grid core-features-main-grid" data-reveal-group style="margin-top:24px;">
+              <div class="core-features-main-card-single left-border-none">
+                <div class="core-features-main-card">
+                  <div class="core-features-main-card-icon-wrap"><img src="/images/Core-Features-Main-Card-Icon-Quantum.svg" loading="lazy" alt="Quantum Computing icon" class="core-features-main-card-icon"></div>
+                  <div class="core-features-main-card-typography">
+                    <div class="core-features-main-card-title">Quantum Computing</div>
+                    <p class="core-features-main-card-description">Quantum-ready infrastructure for national-scale optimization, simulation, and cryptography, keeping Oman at the frontier of sovereign computation.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="core-features-main-card-single middle bottom">
+                <div class="core-features-main-card">
+                  <div class="core-features-main-card-icon-wrap"><img src="/images/Core-Features-Main-Card-Icon-Islamic-Finance.svg" loading="lazy" alt="Islamic Digital Transactions icon" class="core-features-main-card-icon"></div>
+                  <div class="core-features-main-card-typography">
+                    <div class="core-features-main-card-title">Islamic Digital Transactions</div>
+                    <p class="core-features-main-card-description">Sharia-compliant digital transaction infrastructure, purpose-built for Islamic finance principles and Oman’s regulatory framework.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="core-features-main-card-single right-border-none">
+                <div class="core-features-main-card">
+                  <div class="core-features-main-card-icon-wrap"><img src="/images/Core-Features-Main-Card-Icon-Tokenization.svg" loading="lazy" alt="Tokenization icon" class="core-features-main-card-icon"></div>
+                  <div class="core-features-main-card-typography">
+                    <div class="core-features-main-card-title">Tokenization</div>
+                    <p class="core-features-main-card-description">Secure asset tokenization for real-world value, enabling programmable, auditable, sovereign-hosted digital asset infrastructure.</p>
                   </div>
                 </div>
               </div>

@@ -10,6 +10,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 >
   <Fragment slot="head">
     <style is:inline>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="6583dce2e5dc2ac378119f6d"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="a34dc770-4a6d-1892-28c0-9aee6f47f988"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="3728f193-9e18-e6b2-3c42-4b8e0cd3d98e"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="7e5c6abd-8435-7038-2381-6be8fcd5e51e"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="8d129773-5987-dfbd-931e-10845fa38b5c"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="4941897f-90e6-4149-cfd7-b7cf3901c451"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="3258f584-c586-4f7c-f3c7-3354c1d3c420"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="c1f6c245-9e4a-7010-ded8-fe5afa37780d"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="7e26844c-e4cd-93db-750c-422dd27b20ec"] {opacity:0;}}</style>
+    <style is:inline>
+      /* .container.section-padding bakes in a 185px top padding meant to
+         clear the fixed navbar on a page's first section. Reused mid-page,
+         that same value leaves a huge dead gap - trim it down here. */
+      .section.main-features > .main-features-content > .main-features-top-content > .container.section-padding,
+      .section.platform-principles > .container.section-padding {
+        padding-top: 80px;
+      }
+    </style>
   </Fragment>
     <section data-w-id="541d9935-869d-4097-3766-34358ae61a61" class="section features-banner">
       <div class="container section-padding" style="position:relative; overflow:hidden;">

@@ -10,6 +10,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 >
   <Fragment slot="head">
     <style is:inline>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="6583dc9e90180e4e068da5d4"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="20343659-e3c7-b6ac-3a6a-fbcc9c1020df"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="0664be6f-ca9b-4963-4ee2-3fbe3472b954"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="675e28c1-e1b3-a5c5-0b6d-7ac0f7c31392"] {opacity:0;}}</style>
+    <style is:inline>
+      /* .container.section-padding bakes in a 185px top padding meant to
+         clear the fixed navbar on a page's first section. Reused mid-page
+         on the FAQ section here, that same value leaves a huge dead gap. */
+      .section.faq > .container.section-padding {
+        padding-top: 80px;
+      }
+    </style>
   </Fragment>
     <section class="section integration-tools">
       <div class="container section-padding" style="position:relative; overflow:hidden;">

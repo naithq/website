@@ -1,0 +1,20 @@
+<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="21" cy="21" rx="15" ry="6" stroke="url(#quantum_a)" stroke-width="1.5"/>
+<ellipse cx="21" cy="21" rx="15" ry="6" transform="rotate(60 21 21)" stroke="url(#quantum_b)" stroke-width="1.5"/>
+<ellipse cx="21" cy="21" rx="15" ry="6" transform="rotate(120 21 21)" stroke="url(#quantum_c)" stroke-width="1.5"/>
+<circle cx="21" cy="21" r="2.25" fill="#046F36"/>
+<defs>
+<linearGradient id="quantum_a" x1="6" y1="21" x2="36" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CE0704"/>
+<stop offset="1" stop-color="#046F36"/>
+</linearGradient>
+<linearGradient id="quantum_b" x1="6" y1="21" x2="36" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CE0704"/>
+<stop offset="1" stop-color="#046F36"/>
+</linearGradient>
+<linearGradient id="quantum_c" x1="6" y1="21" x2="36" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CE0704"/>
+<stop offset="1" stop-color="#046F36"/>
+</linearGradient>
+</defs>
+</svg>
