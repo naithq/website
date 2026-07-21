@@ -434,5 +434,15 @@
   "Testimonial Image": "صورة الشهادة",
   "Not Found Image": "صورة الصفحة غير الموجودة",
   "Protected Password Image": "صورة الصفحة المحمية",
-  "Switch language / تغيير اللغة": "تبديل اللغة / Switch language"
+  "Switch language / تغيير اللغة": "تبديل اللغة / Switch language",
+  "Expanding the Platform": "توسيع المنصة",
+  "Quantum Computing icon": "أيقونة الحوسبة الكمّية",
+  "Quantum Computing": "الحوسبة الكمّية",
+  "Quantum-ready infrastructure for national-scale optimization, simulation, and cryptography, keeping Oman at the frontier of sovereign computation.": "بنية تحتية جاهزة للحوسبة الكمّية لتحسين الأداء والمحاكاة والتشفير على المستوى الوطني، بما يُبقي عُمان في طليعة الحوسبة السيادية.",
+  "Islamic Digital Transactions icon": "أيقونة المعاملات الرقمية الإسلامية",
+  "Islamic Digital Transactions": "المعاملات الرقمية الإسلامية",
+  "Sharia-compliant digital transaction infrastructure, purpose-built for Islamic finance principles and Oman’s regulatory framework.": "بنية تحتية للمعاملات الرقمية متوافقة مع أحكام الشريعة الإسلامية، مصمَّمة خصيصًا لمبادئ التمويل الإسلامي وإطار عُمان التنظيمي.",
+  "Tokenization icon": "أيقونة الترميز الرقمي",
+  "Tokenization": "الترميز الرقمي",
+  "Secure asset tokenization for real-world value, enabling programmable, auditable, sovereign-hosted digital asset infrastructure.": "ترميز آمن للأصول ذات القيمة الواقعية، يتيح بنية تحتية رقمية قابلة للبرمجة والتدقيق ومُستضافة سياديًا للأصول الرقمية."
 }
